@@ -72,7 +72,8 @@ function firstPage() {
 
 function updateStatus() {
     statusDiv.innerHTML = "<p class='status'>Score: " + totalScore + " of " + allQuestions.length +
-                            "<span>Question: " + (currentQuestion +1) + " of " + allQuestions.length + "</p>" + "<hr>";
+                            "<span>Question: " + (currentQuestion +1) + " of " + allQuestions.length + "</span>" + "</p>" + 
+                            "<hr>";
 }
 
 function hasAnswer() {
@@ -107,12 +108,12 @@ function askQuestion() {
     if (currentQuestion < allQuestions.length) {
         submitButton.value = "Submit Answer";
         quizForm.innerHTML = "<h2>" + question + "</h2>";
+
         for (var i = 0; i < choices.length; i++) {
             quizForm.innerHTML += "<lable><input class='radioChoices 'type='radio' name='choiceOption' value='" + choices[i] + "'/> " +
                                     " " + choices[i] + "</label><br>";  
         }
     }
-    $(".answerbtn").addClass("modifyBtn");
     $("#submitBtn").off("click");
     $("#submitBtn").on("click", function(event) {
         if(hasAnswer()) {
