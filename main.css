@@ -5,7 +5,8 @@
 }
 
 body {
-    background: url(../design-your-quiz-app/image.jpg) no-repeat center center fixed;
+    background: radial-gradient(transparent, black), url(../design-your-quiz-app/image1.jpg) no-repeat center center fixed;
+    /*box-shadow: inset 0 0 5em 1em #000;*/
     background-size: cover;
     padding-top: 130px;
 }
@@ -32,6 +33,10 @@ h2 {
     color: #F22413;
 }
 
+.answer {
+    margin-left: 110px;
+}
+
 .total {
     font-size: 20px;
     color: #878787;
@@ -45,7 +50,7 @@ h2 {
     font-size: 30px;
     font-weight: bold;
     margin-top: 20px;
-    margin-left: 40px;
+    margin-left: 50px;
     margin-bottom: 60px;
 }
 
@@ -58,7 +63,7 @@ span {
 #container {
     width: 600px;
     height: 420px;
-    background-color: #E5E5E5;
+    background-color: #FFFFFF;
     border-radius: 4px;
     margin-left: auto;
     margin-right: auto; 
