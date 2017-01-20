@@ -32,6 +32,10 @@ h2 {
     color: #F22413;
 }
 
+.answer {
+    margin-left: 110px;
+}
+
 .total {
     font-size: 20px;
     color: #878787;

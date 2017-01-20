@@ -1,53 +1,53 @@
 var allQuestions = [
     {
         question: "Petra is located in which country?",
-        choices:["Iran", " Jordan", "Lebanon", "Iraq"],
-        correctAnswerIndex: 1
+        choices:["Iran", "Jordan", "Lebanon", "Iraq"],
+        correctAnswer: "Jordan"
     },
     {
         question: "Taj Mahal is located in which country?",
-        choices:["India", " Pakistan", "Indonesia", "Singapore"],
-        correctAnswerIndex: 0
+        choices:["India", "Pakistan", "Indonesia", "Singapore"],
+        correctAnswer: "India"
     },
     {
         question: "Chichen Itza is located in which country?",
         choices:["Mexico", "United States", "Chile", "Argentina"],
-        correctAnswerIndex: 0
+        correctAnswer: "Mexico"
     },
     {
         question: "The Colosseum is located in which country?",
         choices:["Italy", "France", "Norway", "Germany"],
-        correctAnswerIndex: 0
+        correctAnswer: "Italy"
     },
     {
         question: "Christ The Redeemer Statue on Corcovado Mountain is located in which country?",
         choices:["China", "Canada", "Hungary", "Brazil"],
-        correctAnswerIndex: 3
+        correctAnswer: "Brazil"
     },
     {
         question: "Machu Picchu is located in which country?",
-        choices:["Jamaica", " Cuba", "Peru", "Puerto Rico"],
-        correctAnswerIndex: 2
+        choices:["Jamaica", "Cuba", "Peru", "Puerto Rico"],
+        correctAnswer: "Peru"
     },
     {
         question: "Bali is located in which country?",
         choices:["India", "Philippines", "Indonesia", "Romania"],
-        correctAnswerIndex: 2
+        correctAnswer: "Indonesia"
     },
     {
         question: "Iguazu Falls is located between which two countries?",
         choices:["Argentina and Brazil", "China-Nepal", "India-Pakistan", "Poland-Germany"],
-        correctAnswerIndex: 0
+        correctAnswer: "Argentina and Brazil"
     },
     {
         question: "Ngorongoro Crater is located in which country?",
         choices:["Nigeria", "Tanzania", "Algeria", "Chad"],
-        correctAnswerIndex: 1
+        correctAnswer: "Tanzania"
     },
     {
         question: "The Great Barrier Reef is located in which country?",
-        choices:["Iran", " Australia", "Lebanon", "Taiwan"],
-        correctAnswerIndex: 1
+        choices:["Iran", "Australia", "Lebanon", "Taiwan"],
+        correctAnswer: "Australia"
     },
 ];
 
@@ -88,9 +88,11 @@ function checkAnswer() {
     if (radioOptions.length > 1) {
         for (var i = 0; i < radioOptions.length; i++) {
             var select = radioOptions[i];
+            var correctAnswer = allQuestions[currentQuestion].correctAnswer;
 
             if (select.checked) {
-                if (i === allQuestions[currentQuestion].correctAnswerIndex) {
+                if (select.value === correctAnswer) {
+                    console.log(correctAnswer);
                     return true;
                 } else {
                     return false;
@@ -104,13 +106,12 @@ function askQuestion() {
     updateStatus();
     var choices = allQuestions[currentQuestion].choices;
     var question = allQuestions[currentQuestion].question;
-    
     if (currentQuestion < allQuestions.length) {
         submitButton.value = "Submit Answer";
         quizForm.innerHTML = "<h2>" + question + "</h2>";
 
         for (var i = 0; i < choices.length; i++) {
-            quizForm.innerHTML += "<lable><input class='radioChoices 'type='radio' name='choiceOption' value='" + choices[i] + "'/> " +
+            quizForm.innerHTML += "<lable><input class='radioChoices' type='radio' name='choiceOption' value='" + choices[i] + "'/> " +
                                     " " + choices[i] + "</label><br>";  
         }
     }
@@ -127,11 +128,13 @@ function askQuestion() {
 
 function revealAnswer() {
     updateStatus();
+    var correctAnswer = allQuestions[currentQuestion].correctAnswer;
     if (checkAnswer() == true) {
         quizForm.innerHTML = "<h3 class='correct'>You are correct!</h3>";
         totalScore += 1;
     } else {
-        quizForm.innerHTML = "<h3 class='incorrect'>You are incorrect!</h3>";
+        quizForm.innerHTML = "<h3 class='incorrect'>You are incorrect!</h3>" + 
+                            "<h3 class='answer'>The right answer is " + correctAnswer + ".";
     }
 
     if (currentQuestion === (allQuestions.length - 1)) {
