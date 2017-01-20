@@ -14,49 +14,49 @@ var allQuestions = [
         choices:["Mexico", "United States", "Chile", "Argentina"],
         correctAnswerIndex: 0
     },
-    {
-        question: "The Colosseum is located in which country?",
-        choices:["Italy", "France", "Norway", "Germany"],
-        correctAnswerIndex: 0
-    },
-    {
-        question: "Christ The Redeemer Statue on Corcovado Mountain is located in which country?",
-        choices:["China", "Canada", "Hungary", "Brazil"],
-        correctAnswerIndex: 3
-    },
-    {
-        question: "Machu Picchu is located in which country?",
-        choices:["Jamaica", " Cuba", "Peru", "Puerto Rico"],
-        correctAnswerIndex: 2
-    },
-    {
-        question: "Bali is located in which country?",
-        choices:["India", "Philippines", "Indonesia", "Romania"],
-        correctAnswerIndex: 2
-    },
-    {
-        question: "Iguazu Falls is located between which two countries?",
-        choices:["Argentina and Brazil", "China-Nepal", "India-Pakistan", "Poland-Germany"],
-        correctAnswerIndex: 0
-    },
-    {
-        question: "Ngorongoro Crater is located in which country?",
-        choices:["Nigeria", "Tanzania", "Algeria", "Chad"],
-        correctAnswerIndex: 1
-    },
-    {
-        question: "The Great Barrier Reef is located in which country?",
-        choices:["Iran", " Australia", "Lebanon", "Taiwan"],
-        correctAnswerIndex: 1
-    },
+    // {
+    //     question: "The Colosseum is located in which country?",
+    //     choices:["Italy", "France", "Norway", "Germany"],
+    //     correctAnswerIndex: 0
+    // },
+    // {
+    //     question: "Christ The Redeemer Statue on Corcovado Mountain is located in which country?",
+    //     choices:["China", "Canada", "Hungary", "Brazil"],
+    //     correctAnswerIndex: 3
+    // },
+    // {
+    //     question: "Machu Picchu is located in which country?",
+    //     choices:["Jamaica", " Cuba", "Peru", "Puerto Rico"],
+    //     correctAnswerIndex: 2
+    // },
+    // {
+    //     question: "Bali is located in which country?",
+    //     choices:["India", "Philippines", "Indonesia", "Romania"],
+    //     correctAnswerIndex: 2
+    // },
+    // {
+    //     question: "Iguazu Falls is located between which two countries?",
+    //     choices:["Argentina and Brazil", "China-Nepal", "India-Pakistan", "Poland-Germany"],
+    //     correctAnswerIndex: 0
+    // },
+    // {
+    //     question: "Ngorongoro Crater is located in which country?",
+    //     choices:["Nigeria", "Tanzania", "Algeria", "Chad"],
+    //     correctAnswerIndex: 1
+    // },
+    // {
+    //     question: "The Great Barrier Reef is located in which country?",
+    //     choices:["Iran", " Australia", "Lebanon", "Taiwan"],
+    //     correctAnswerIndex: 1
+    // },
 ];
 
 var submitButton = document.getElementById("submitBtn");
-var currentQuestion = 0;
-var totalScore = 0;
 var quizForm = document.getElementById("quiz");
 var radioOptions = document.getElementsByName("choiceOption");
 var statusDiv = document.getElementById("status");
+var currentQuestion = 0;
+var totalScore = 0;
 var index = 0;
 
 function firstPage() {
@@ -152,7 +152,7 @@ function revealAnswer() {
 function showScore() {
     updateStatus();
     statusDiv.innerHTML = "";
-    quizForm.innerHTML = "<p class='finish'>You have finished the quiz</p>" + 
+    quizForm.innerHTML = "<p class='finish'>You have finished the quiz.</p>" + 
                         "<p class='total'>Your score is a total of " + totalScore + " out of " + allQuestions.length + "</p>";
     submitButton.value = "Start Over"
     $("#submitBtn").off("click");
