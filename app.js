@@ -152,7 +152,7 @@ function revealAnswer() {
 function showScore() {
     updateStatus();
     statusDiv.innerHTML = "";
-    quizForm.innerHTML = "<p class='finish'>You have finished the quiz</p>" + 
+    quizForm.innerHTML = "<p class='finish'>You have finished the quiz.</p>" + 
                         "<p class='total'>Your score is a total of " + totalScore + " out of " + allQuestions.length + "</p>";
     submitButton.value = "Start Over"
     $("#submitBtn").off("click");
