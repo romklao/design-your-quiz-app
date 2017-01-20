@@ -9,136 +9,14 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header class="firstPage">
-        <form>
-            <h2>The World Famous Places Quiz</h2>
-            <button id="startQuizz" type="button">Start Quiz</button>
-        </form>
-    </header>
-    <header class="styleQuizz header">
-        <h2>The World Famous Places Quiz</h2>
-        <section>
-            <h3 id="question-answer">Question</h3>
-            <p class="current-score">Score</p>
-        </section>
-    </header>
-    <main>
-            <div class="styleQuizz">
-                <form>
-                    <p>Good job! Your answer is correct!</p>
-                    <button type="button">Next Question >></button>
-                </form>
-            </div>
-            <div class="styleQuizz">
-                <form>
-                    <p>Nice try! Your answer is incorrect!</p>
-                    <button type="button">Next Question >></button>
-                </form>
-            </div>
-            <div class="styleQuizz answerQ1">
-                <form>
-                    <p>Petra is located in which country?</p>
-                    <input type="radio" name="countries" value="Iran"> Iran<br>
-                    <input type="radio" name="countries" value="Jordan" selected="true"> Jordan<br>
-                    <input type="radio" name="countries" value="Lebanon"> Lebanon<br>
-                    <input type="radio" name="countries" value="Iraq"> Iraq<br>
-                    <button type="button">Submit Answer</button>
-                </form>
-            </div>
-            <div class="styleQuizz answerQ2">
-                <form>
-                    <p>Taj Mahal is located in which country?</p>
-                    <input type="radio" name="countries" value="India"> India<br>
-                    <input type="radio" name="countries" value="Pakistan"> Pakistan<br>
-                    <input type="radio" name="countries" value="Singapore"> Singapore<br>
-                    <input type="radio" name="countries" value="Indonesia"> Indonesia<br>
-                    <button type="button">Submit Answer</button>
-                </form>
-            </div>
-            <div class="styleQuizz answerQ3">
-                <form>
-                    <p>Chichen Itza is located in which country?</p>
-                    <input type="radio" name="countries" value="Mexico"> Mexico<br>
-                    <input type="radio" name="countries" value="United States"> United States<br>
-                    <input type="radio" name="countries" value="Chile"> Chile<br>
-                    <input type="radio" name="countries" value="Argentina"> Argentina<br>
-                    <button type="button">Submit Answer</button>
-                </form>
-                
-            </div>
-            <div class="styleQuizz answerQ4">
-                <form>
-                    <p>The Colosseum is located in which country?</p>
-                    <input type="radio" name="countries" value="Italy"> Italy<br>
-                    <input type="radio" name="countries" value="France"> France<br>
-                    <input type="radio" name="countries" value="Norway"> Norway<br>
-                    <input type="radio" name="countries" value="Germany"> Germany<br>
-                    <button type="button">Submit Answer</button>
-                </form>
-            </div>
-            <div class="styleQuizz answerQ5">
-                <form>
-                    <p>Christ The Redeemer Statue on Corcovado Mountain is located in which country?</p>
-                    <input type="radio" name="countries" value="China"> China<br>
-                    <input type="radio" name="countries" value="Canada"> Canada<br>
-                    <input type="radio" name="countries" value="Hungary"> Hungary<br>
-                    <input type="radio" name="countries" value="Brazil"> Brazil<br>
-                    <button type="button">Submit Answer</button>
-                </form>
-            </div>
-            <div class="styleQuizz answerQ6">
-                <form>
-                    <p>Machu Picchu is located in which country?</p>
-                    <input type="radio" name="countries" value="Jamaica"> Jamaica<br>
-                    <input type="radio" name="countries" value="Cuba"> Cuba<br>
-                    <input type="radio" name="countries" value="Peru"> Peru<br>
-                    <input type="radio" name="countries" value="Puerto Rico"> Puerto Rico<br>
-                    <button type="button">Submit Answer</button>
-                </form>
-            </div>
-            <div class="styleQuizz answerQ7">
-                <form>
-                    <p>Iguazu Falls is located between which two countries?</p>
-                    <input type="radio" name="countries" value="Argentina and Brazil"> Argentina and Brazil<br>
-                    <input type="radio" name="countries" value=" China-Nepal">  China-Nepal<br>
-                    <input type="radio" name="countries" value="India-Pakistan"> India-Pakistan<br>
-                    <input type="radio" name="countries" value="Poland-Germany"> Poland-Germany<br>
-                    <button type="button">Submit Answer</button>
-                </form>
-            </div>
-            <div class="styleQuizz answerQ8">
-                <form>
-                    <p>Bali is located in which country?</p>
-                    <input type="radio" name="countries" value="India"> India<br>
-                    <input type="radio" name="countries" value="Philippines"> Philippines<br>
-                    <input type="radio" name="countries" value="Indonesia"> Indonesia<br>
-                    <input type="radio" name="countries" value="Romania"> Romania<br>
-                    <button type="button">Submit Answer</button>
-                </form>
-            </div>
-            <div class="styleQuizz answerQ9">
-                <form>
-                    <p>Ngorongoro Crater is located in which country?</p>
-                    <input type="radio" name="countries" value="Nigeria"> Nigeria<br>
-                    <input type="radio" name="countries" value="Tanzania"> Tanzania<br>
-                    <input type="radio" name="countries" value="Algeria"> Algeria<br>
-                    <input type="radio" name="countries" value="Chad"> Chad<br>
-                    <button type="button">Submit Answer</button>
-                </form>
-            </div>
-            <div class="styleQuizz answerQ10">
-                <form>
-                    <p>The Great Barrier Reef is located in which country?</p>
-                    <input type="radio" name="countries" value="Australia"> Australia<br>
-                    <input type="radio" name="countries" value="China"> China<br>
-                    <input type="radio" name="countries" value="Taiwan"> Taiwan<br>
-                    <input type="radio" name="countries" value="South Africa"> South Africa<br>
-                    <button type="button">Submit Answer</button>
-                </form>
-            </div>
-        
-    </main>
-
+    <div id="container">
+        <div id="status">
+        </div>
+        <div id="quiz">
+        </div> 
+        <input type='submit' id='submitBtn' class="answerBtn" value=''/>
+    </div>   
+                    
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="app.js"></script>
