@@ -72,7 +72,8 @@ function firstPage() {
 
 function updateStatus() {
     statusDiv.innerHTML = "<p class='status'>Score: " + totalScore + " of " + allQuestions.length +
-                            "<span>Question: " + (currentQuestion +1) + " of " + allQuestions.length + "</p>" + "<hr>";
+                            "<span>Question: " + (currentQuestion +1) + " of " + allQuestions.length + "</span>" + "</p>" + 
+                            "<hr>";
 }
 
 function hasAnswer() {
