@@ -5,7 +5,8 @@
 }
 
 body {
-    background: url(../design-your-quiz-app/image.jpg) no-repeat center center fixed;
+    background: radial-gradient(transparent, black), url(../design-your-quiz-app/image.jpg) no-repeat center center fixed;
+    /*box-shadow: inset 0 0 5em 1em #000;*/
     background-size: cover;
     padding-top: 130px;
 }
@@ -62,7 +63,7 @@ span {
 #container {
     width: 600px;
     height: 420px;
-    background-color: #E5E5E5;
+    background-color: #FFFFFF;
     border-radius: 4px;
     margin-left: auto;
     margin-right: auto; 
