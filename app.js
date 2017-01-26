@@ -63,7 +63,7 @@ function firstPage() {
     currentQuestion = 0;
     submitButton.value = "Start Quiz";
     statusDiv.innerHTML = "";
-    quizForm.innerHTML = "<h1>The World Famous Places Quiz</h1>"
+    quizForm.innerHTML = "<h1 class='title'>The World Famous Places Quiz</h1>"
     $("#submitBtn").off("click");
     $("#submitBtn").on("click", function(event) {
         askQuestion();
@@ -71,9 +71,8 @@ function firstPage() {
 }
 
 function updateStatus() {
-    statusDiv.innerHTML = "<p class='status'>Score: " + totalScore + " of " + allQuestions.length +
-                            "<span>Question: " + (currentQuestion +1) + " of " + allQuestions.length + "</span>" + "</p>" + 
-                            "<hr>";
+    statusDiv.innerHTML = "<div class='scoreUpdate'>Score: " + totalScore + " of " + allQuestions.length + "</div>" +
+                          "<div class='questionUpdate'>Question: " + (currentQuestion + 1) + " of " + allQuestions.length + "</div>";
 }
 
 function hasAnswer() {
@@ -108,12 +107,15 @@ function askQuestion() {
     var question = allQuestions[currentQuestion].question;
     if (currentQuestion < allQuestions.length) {
         submitButton.value = "Submit Answer";
-        quizForm.innerHTML = "<h2>" + question + "</h2>";
+        var quizFormStr = "<h2>" + question + "</h2>" +
+                          "<div class='choicesContainer'>";
 
         for (var i = 0; i < choices.length; i++) {
-            quizForm.innerHTML += "<lable><input class='radioChoices' type='radio' name='choiceOption' value='" + choices[i] + "'/> " +
-                                    " " + choices[i] + "</label><br>";  
+            quizFormStr += "<label><input class='radioChoices' type='radio' name='choiceOption' value='" + choices[i] + "'/> " +
+                           " " + choices[i] + "</label><br>";  
         }
+        quizFormStr += "</div>";
+        quizForm.innerHTML = quizFormStr;
     }
     $("#submitBtn").off("click");
     $("#submitBtn").on("click", function(event) {
